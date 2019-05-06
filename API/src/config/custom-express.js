@@ -2,11 +2,11 @@ const express = require('express');
 const consign = require('consign');
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
-const rotas = require('../app/routes/routes');
+const routes = require('../app/routes/routes');
 
 //App
 const app = express();
-rotas(app);
+routes(app);
 
 //BodyParser
 app.use(bodyParser.urlencoded({extended: true}));
