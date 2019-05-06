@@ -1,0 +1,10 @@
+C:\Users\Marco\Desktop\dotnet\produtos\Produtos\Produtos\bin\Debug\Produtos.exe.config
+C:\Users\Marco\Desktop\dotnet\produtos\Produtos\Produtos\bin\Debug\Produtos.exe
+C:\Users\Marco\Desktop\dotnet\produtos\Produtos\Produtos\bin\Debug\Produtos.pdb
+C:\Users\Marco\Desktop\dotnet\produtos\Produtos\Produtos\obj\Debug\Produtos.csprojAssemblyReference.cache
+C:\Users\Marco\Desktop\dotnet\produtos\Produtos\Produtos\obj\Debug\Produtos.Form1.resources
+C:\Users\Marco\Desktop\dotnet\produtos\Produtos\Produtos\obj\Debug\Produtos.Properties.Resources.resources
+C:\Users\Marco\Desktop\dotnet\produtos\Produtos\Produtos\obj\Debug\Produtos.csproj.GenerateResource.cache
+C:\Users\Marco\Desktop\dotnet\produtos\Produtos\Produtos\obj\Debug\Produtos.csproj.CoreCompileInputs.cache
+C:\Users\Marco\Desktop\dotnet\produtos\Produtos\Produtos\obj\Debug\Produtos.exe
+C:\Users\Marco\Desktop\dotnet\produtos\Produtos\Produtos\obj\Debug\Produtos.pdb
