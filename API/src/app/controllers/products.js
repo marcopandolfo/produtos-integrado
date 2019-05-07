@@ -16,10 +16,22 @@ module.exports = (app) => {
 
     // POST NEW
     app.post(baseUrl, (req, res) => {
+        req.assert('name', 'Invalid name').notEmpty();
+        req.assert('price', 'Invalid price').notEmpty().isFloat();
+        req.assert('description', 'Invalid Description').notEmpty();
+
+        const errors = req.validationErrors();
+
+        if (errors) {
+            res.status(422).send(errors);
+            return;
+        }
+
         const product = {
             name: req.body.name,
             price: req.body.price,
             description: req.body.description,
+            createdAt: new Date().toLocaleString(),
         };
 
         getProductsDAO().save(product, (err, result) => {
@@ -36,6 +48,13 @@ module.exports = (app) => {
 
     // DELETE
     app.delete(baseUrl, (req, res) => {
+        req.assert('id', 'You must pass a ID').notEmpty();
+        const errors = req.validationErrors();
+        if (errors) {
+            res.status(422).send(errors);
+            return;
+        }
+
         const { id } = req.body;
 
         getProductsDAO().deleteId(id, (err) => {

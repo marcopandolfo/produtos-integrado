@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS `products` (
+	`id` int(10) NOT NULL auto_increment,
+	`name` varchar(255) NOT NULL,
+	`price` varchar(255) NOT NULL,
+	`createdAt` varchar(255) NOT NULL,
+	`description` varchar(255) NOT NULL,
+	PRIMARY KEY( `id` )
+);
