@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 const mysql = require('mysql');
 
 function createDBConnection() {
@@ -5,7 +6,7 @@ function createDBConnection() {
         host: 'localhost',
         user: 'root',
         password: 'password', // insert you password
-        database: 'database',
+        database: 'products',
     });
 }
 

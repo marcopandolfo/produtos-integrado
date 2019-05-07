@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(expressValidator());
 
 // Consign
-consign({ cwd: 'src/app' })
+consign({ cwd: 'src\\app' })
     .include('controllers')
     .then('infra')
     .then('models')
