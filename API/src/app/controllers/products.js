@@ -1,5 +1,12 @@
 module.exports = (app) => {
-    app.get('/products', (req, res) => {
-        res.status(200).send('OK');
+    const baseUrl = '/products';
+
+    app.get(baseUrl, (req, res) => {
+    });
+
+    app.post(baseUrl, (req, res) => {
+    });
+
+    app.delete(baseUrl, (req, res) => {
     });
 };
