@@ -16,6 +16,7 @@ module.exports = (app) => {
 
     // POST NEW
     app.post(baseUrl, (req, res) => {
+        console.log(req.body);
         req.assert('name', 'Invalid name').notEmpty();
         req.assert('price', 'Invalid price').notEmpty().isFloat();
         req.assert('description', 'Invalid Description').notEmpty();

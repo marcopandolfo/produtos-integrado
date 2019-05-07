@@ -33,14 +33,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPrincipal = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btmRemover = new System.Windows.Forms.Button();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtValor = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdicionar = new System.Windows.Forms.Button();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,6 +48,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnAtualiza = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtValor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(406, 219);
+            this.label12.Location = new System.Drawing.Point(395, 219);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(40, 16);
             this.label12.TabIndex = 40;
@@ -65,7 +66,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(500, 216);
+            this.label11.Location = new System.Drawing.Point(458, 219);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(70, 16);
             this.label11.TabIndex = 39;
@@ -75,7 +76,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(323, 219);
+            this.label10.Location = new System.Drawing.Point(335, 219);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(45, 16);
             this.label10.TabIndex = 38;
@@ -85,22 +86,21 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(277, 219);
+            this.label9.Location = new System.Drawing.Point(297, 219);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(21, 16);
             this.label9.TabIndex = 37;
             this.label9.Text = "ID";
             // 
-            // textBox2
+            // txtPrincipal
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox2.Location = new System.Drawing.Point(280, 235);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(370, 191);
-            this.textBox2.TabIndex = 36;
-            this.textBox2.Text = resources.GetString("textBox2.Text");
+            this.txtPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrincipal.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtPrincipal.Location = new System.Drawing.Point(300, 235);
+            this.txtPrincipal.Multiline = true;
+            this.txtPrincipal.Name = "txtPrincipal";
+            this.txtPrincipal.Size = new System.Drawing.Size(320, 191);
+            this.txtPrincipal.TabIndex = 36;
             // 
             // label8
             // 
@@ -123,15 +123,16 @@
             this.label6.TabIndex = 34;
             this.label6.Text = "Insira o id";
             // 
-            // button2
+            // btmRemover
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(714, 272);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 41);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Remover";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btmRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmRemover.Location = new System.Drawing.Point(714, 272);
+            this.btmRemover.Name = "btmRemover";
+            this.btmRemover.Size = new System.Drawing.Size(119, 41);
+            this.btmRemover.TabIndex = 33;
+            this.btmRemover.Text = "Remover";
+            this.btmRemover.UseVisualStyleBackColor = true;
+            this.btmRemover.Click += new System.EventHandler(this.btmRemover_Click);
             // 
             // txtId
             // 
@@ -159,15 +160,16 @@
             this.txtValor.Size = new System.Drawing.Size(180, 21);
             this.txtValor.TabIndex = 30;
             // 
-            // button1
+            // btnAdicionar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(63, 412);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 41);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Adicionar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionar.Location = new System.Drawing.Point(63, 412);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(119, 41);
+            this.btnAdicionar.TabIndex = 29;
+            this.btnAdicionar.Text = "Adicionar";
+            this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // txtDesc
             // 
@@ -218,7 +220,7 @@
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(300, 21);
+            this.label2.Location = new System.Drawing.Point(300, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(279, 71);
             this.label2.TabIndex = 23;
@@ -235,23 +237,35 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Adicionar";
             // 
+            // btnAtualiza
+            // 
+            this.btnAtualiza.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualiza.Location = new System.Drawing.Point(398, 439);
+            this.btnAtualiza.Name = "btnAtualiza";
+            this.btnAtualiza.Size = new System.Drawing.Size(119, 41);
+            this.btnAtualiza.TabIndex = 41;
+            this.btnAtualiza.Text = "Atualizar";
+            this.btnAtualiza.UseVisualStyleBackColor = true;
+            this.btnAtualiza.Click += new System.EventHandler(this.btnAtualiza_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 492);
+            this.Controls.Add(this.btnAtualiza);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtPrincipal);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btmRemover);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtValor);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -274,14 +288,14 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPrincipal;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btmRemover;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown txtValor;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -289,6 +303,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAtualiza;
     }
 }
 
