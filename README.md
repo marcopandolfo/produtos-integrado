@@ -28,7 +28,7 @@
 
 
 # 3° - GUI 💻
-## Com a API e o DB no ar, você pode abrir a interface executando o arquivo GUI.exe , dentro da pasta 'GUI'
+## Com a API e o DB no ar, você pode abrir a interface abrindo e executando em seu Visual Studio, ou executando diretamente o arquivo \Produtos\bin\Debug\Produtos.exe
 
 # 3° Contribuição ✌️
 ### Contribuições são 100% bem-vindas, bastar fazer uma PR ou Issue
