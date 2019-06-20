@@ -20,6 +20,7 @@ module.exports = (app) => {
         req.assert('name', 'Invalid name').notEmpty();
         req.assert('price', 'Invalid price').notEmpty().isFloat();
         req.assert('description', 'Invalid Description').notEmpty();
+        req.assert('brand', 'Invalid Brand').notEmpty();
 
         const errors = req.validationErrors();
 
@@ -32,6 +33,7 @@ module.exports = (app) => {
             name: req.body.name,
             price: req.body.price,
             description: req.body.description,
+            brand: req.body.brand,
             createdAt: new Date().toLocaleString(),
         };
 
