@@ -1,0 +1,15 @@
+C:\Users\mateu\Documents\produtos-integrado\GUI\newGUI\newGUI\bin\Debug\newGUI.exe.config
+C:\Users\mateu\Documents\produtos-integrado\GUI\newGUI\newGUI\bin\Debug\newGUI.exe
+C:\Users\mateu\Documents\produtos-integrado\GUI\newGUI\newGUI\bin\Debug\newGUI.pdb
+C:\Users\mateu\Documents\produtos-integrado\GUI\newGUI\newGUI\obj\Debug\newGUI.csprojAssemblyReference.cache
+C:\Users\mateu\Documents\produtos-integrado\GUI\newGUI\newGUI\obj\Debug\newGUI.newGUI.resources
+C:\Users\mateu\Documents\produtos-integrado\GUI\newGUI\newGUI\obj\Debug\newGUI.Properties.Resources.resources
+C:\Users\mateu\Documents\produtos-integrado\GUI\newGUI\newGUI\obj\Debug\newGUI.csproj.GenerateResource.cache
+C:\Users\mateu\Documents\produtos-integrado\GUI\newGUI\newGUI\obj\Debug\newGUI.csproj.CoreCompileInputs.cache
+C:\Users\mateu\Documents\produtos-integrado\GUI\newGUI\newGUI\obj\Debug\newGUI.exe
+C:\Users\mateu\Documents\produtos-integrado\GUI\newGUI\newGUI\obj\Debug\newGUI.pdb
+C:\Users\mateu\Documents\produtos-integrado\GUI\newGUI\newGUI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mateu\Documents\produtos-integrado\GUI\newGUI\newGUI\bin\Debug\RestSharp.dll
+C:\Users\mateu\Documents\produtos-integrado\GUI\newGUI\newGUI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mateu\Documents\produtos-integrado\GUI\newGUI\newGUI\bin\Debug\RestSharp.xml
+C:\Users\mateu\Documents\produtos-integrado\GUI\newGUI\newGUI\obj\Debug\newGUI.csproj.CopyComplete
