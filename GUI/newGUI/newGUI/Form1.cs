@@ -11,6 +11,7 @@ namespace newGUI
         public newGUI()
         {
             InitializeComponent();
+            GetDados();
         }
 
         // class sendID
@@ -27,43 +28,64 @@ namespace newGUI
         // method POST
         private void PostarDados(Produto p)
         {
-            var client = new RestClient(@"http://localhost:3000/products");
-            var request = new RestRequest(Method.POST);
-            request.AddHeader("Accept", "application/json");
-            request.RequestFormat = DataFormat.Json;
-            string json = JsonConvert.SerializeObject(p);
-            request.AddJsonBody(json);
-            client.Execute(request);
+            try
+            {
+                var client = new RestClient(@"http://localhost:3000/products");
+                var request = new RestRequest(Method.POST);
+                request.AddHeader("Accept", "application/json");
+                request.RequestFormat = DataFormat.Json;
+                string json = JsonConvert.SerializeObject(p);
+                request.AddJsonBody(json);
+                client.Execute(request);
+            }
+            catch (Exception e)
+            {
+                ExibeAlerta(e);
+            }
         }
 
         // method GET
         private void GetDados()
         {
-            txtGrid.Text = "";
-
-            var client = new RestClient(@"http://localhost:3000/products");
-            var request = new RestRequest(Method.GET);
-            request.AddHeader("Accept", "application/json");
-            IRestResponse response = client.Execute(request);
-
-            IList<Produto> produtos = JsonConvert.DeserializeObject<IList<Produto>>(response.Content);
-            foreach (var produto in produtos)
+            try
             {
-                txtGrid.AppendText($"[{produto.id}] | {produto.name} | R${produto.price} | {produto.description}\n");
+                txtGrid.Text = "";
+
+                var client = new RestClient(@"http://localhost:3000/products");
+                var request = new RestRequest(Method.GET);
+                request.AddHeader("Accept", "application/json");
+                IRestResponse response = client.Execute(request);
+
+                IList<Produto> produtos = JsonConvert.DeserializeObject<IList<Produto>>(response.Content);
+                foreach (var produto in produtos)
+                {
+                    txtGrid.AppendText($"[{produto.id}] | {produto.name} | R${produto.price} | {produto.description}\n");
+                }
+            }
+            catch (Exception e)
+            {
+                ExibeAlerta(e);
             }
         }
 
         // method DELETE
         private void Remove(string id)
         {
-            var client = new RestClient(@"http://localhost:3000/products");
-            var request = new RestRequest(Method.DELETE);
-            request.AddHeader("Accept", "application/json");
-            request.RequestFormat = DataFormat.Json;
+            try
+            {
+                var client = new RestClient(@"http://localhost:3000/products");
+                var request = new RestRequest(Method.DELETE);
+                request.AddHeader("Accept", "application/json");
+                request.RequestFormat = DataFormat.Json;
 
-            string json = JsonConvert.SerializeObject(new SendId(id));
-            request.AddJsonBody(json);
-            client.Execute(request);
+                string json = JsonConvert.SerializeObject(new SendId(id));
+                request.AddJsonBody(json);
+                client.Execute(request);
+            }
+            catch (Exception e)
+            {
+                ExibeAlerta(e);
+            }
         }
 
         // botão power
@@ -91,6 +113,15 @@ namespace newGUI
         {
             Remove(txtID.Text);
             GetDados();
+        }
+
+        private void ExibeAlerta(Exception e)
+        {
+            string message = "API OFFLINE (localhost:3000/products)"+ "\n" + e.Message;
+            string caption = "Ocorreu um erro!";
+            MessageBoxButtons button = MessageBoxButtons.OK;
+
+            MessageBox.Show(message, caption, button);
         }
     }
 }
