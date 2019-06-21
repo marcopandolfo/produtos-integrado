@@ -1,6 +1,6 @@
 # Projeto desenvolvido utilizando C# Windows Forms (GUI) e API feita em Nodejs (express), com banco de dados MySQL
 
-![image](https://user-images.githubusercontent.com/40467826/57259810-484c8f80-7037-11e9-934d-35a9b0a80b03.png)
+![captureScreenSystem](https://user-images.githubusercontent.com/44484286/59908123-08711a00-93e3-11e9-83be-d1f0a3c8f8a9.PNG)
 
 # 1° - API 🚀
 ## Instalando os pacotes:
