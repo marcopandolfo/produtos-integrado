@@ -17,7 +17,6 @@ app.use(expressValidator());
 consign({ cwd: 'src\\app' })
     .include('controllers')
     .then('infra')
-    .then('models')
     .into(app);
 
 module.exports = app;
