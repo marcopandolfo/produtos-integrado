@@ -39,6 +39,8 @@ namespace newGUI
         // method GET
         private void GetDados()
         {
+            txtGrid.Text = "";
+
             var client = new RestClient(@"http://localhost:3000/products");
             var request = new RestRequest(Method.GET);
             request.AddHeader("Accept", "application/json");
